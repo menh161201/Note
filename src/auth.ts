@@ -22,8 +22,8 @@ export const {handlers: {GET, POST}, auth, signOut, signIn} = NextAuth({
     adapter: PrismaAdapter(db),
     providers: [
         github({
-            clientId: GITHUB_CLIENT_ID,
-            clientSecret: GITHUB_CLIENT_SECRET
+            clientId: '5abcfe77cd3f559dd596',
+            clientSecret: 'c3168baf338d93d32dc93a912fe10f6ae0f1f8cd'
         }),
         google({
             clientId: GOOGLE_CLIENT_ID,
