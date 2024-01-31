@@ -38,5 +38,6 @@ export const {handlers: {GET, POST}, auth, signOut, signIn} = NextAuth({
 
             return session
         }
-    }
+    },
+    secret: process.env.NEXTAUTH_SECRET
 })
