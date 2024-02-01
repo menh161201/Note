@@ -40,6 +40,7 @@ export async function createFolder(formState: createFolderProps, formData: FormD
     
     try {
         folder = await db.folder.create({
+            //@ts-ignore
             data: {
                 title: result.data.title,
                 userId: session.user.id,
