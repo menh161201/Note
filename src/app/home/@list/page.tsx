@@ -97,7 +97,7 @@ export default async function ListPage({
               
               <div className='flex flex-col gap-2'>
                 {
-                  tag.notes.map((note:Note) => (
+                  tag.notes.map((note) => (
                     <Link href={paths.showNoteTag(tag.id,note.id)} key={note.id}>
                         <div className="border p-2 flex items-center rounded-md gap-2 shadow-md">
                             <ReaderIcon />
