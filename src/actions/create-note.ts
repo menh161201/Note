@@ -16,11 +16,13 @@ export async function CreateNote(folderId: string) {
     let note : Note;
     try {
         note = await db.note.create({
+            //@ts-ignore
             data: {
                 title: 'Untitled',
-                folderId: folderId,
+                content: '',
                 userId: session.user.id,
-                content: ''
+                folderId: folderId,
+
             }
         })
     } catch (err:unknown) {

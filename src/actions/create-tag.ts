@@ -41,6 +41,7 @@ export async function createTag(noteId: string,formState: createTagProps, formDa
             },
             data: {
                 tags: {
+                    //@ts-ignore
                     create: {
                         name: result.data.name,
                         userId: session.user.id
