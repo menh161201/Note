@@ -7,7 +7,7 @@ import NavBarLarge from "./nav-bar-large";
 
 export default async function NavBar() {
     const session = await auth();
-    if (!session?.user || !session) {
+    if (!session || !session.user || !session.user.id) {
         redirect('/')
     }
 
