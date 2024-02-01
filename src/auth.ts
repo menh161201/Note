@@ -40,7 +40,7 @@ export const {handlers: {GET, POST}, auth, signOut, signIn} = NextAuth({
         }
     },
     secret: process.env.NEXTAUTH_SECRET,
-    // debug: true,
+    debug: true,
     // trustHost: true
     cookies: {
         pkceCodeVerifier: {
