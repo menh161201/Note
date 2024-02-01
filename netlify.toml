@@ -1,9 +1,3 @@
 [build]
-  command = "next build"
-  publish = ".next/"
-
-[[redirects]]
-  from = "/_next/static/*"
-  to = "/static/:splat"
-  status = 301
-  force = true
+    command = "yarn build && yarn export"
+    publish = "out"
