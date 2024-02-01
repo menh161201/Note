@@ -13,6 +13,7 @@ import { CiFolderOn } from "react-icons/ci";
 import { CiShoppingTag } from "react-icons/ci";
 import { Suspense } from 'react';
 import FolderListSkeleton from '@/components/skeleton/folder-list-skeleton';
+import { Note } from '@prisma/client';
 
 export default async function ListPage({
     params,
@@ -96,7 +97,7 @@ export default async function ListPage({
               
               <div className='flex flex-col gap-2'>
                 {
-                  tag.notes.map((note) => (
+                  tag.notes.map((note:Note) => (
                     <Link href={paths.showNoteTag(tag.id,note.id)} key={note.id}>
                         <div className="border p-2 flex items-center rounded-md gap-2 shadow-md">
                             <ReaderIcon />
