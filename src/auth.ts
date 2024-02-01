@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import github from "next-auth/providers/github";
+import GitHub from "next-auth/providers/github";
 import google from "next-auth/providers/google";
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { db } from "./db";
@@ -21,7 +21,7 @@ if (!GOOGLE_CLIENT_ID || !GOOGLE_CLIENT_SECRET) {
 export const {handlers: {GET, POST}, auth, signOut, signIn} = NextAuth({
     adapter: PrismaAdapter(db),
     providers: [
-        github({
+        GitHub({
             clientId: GITHUB_CLIENT_ID,
             clientSecret: GITHUB_CLIENT_SECRET
         }),
@@ -40,6 +40,6 @@ export const {handlers: {GET, POST}, auth, signOut, signIn} = NextAuth({
         }
     },
     secret: process.env.NEXTAUTH_SECRET,
-    debug: true,
-    trustHost: true
+    // debug: true,
+    // trustHost: true
 })
