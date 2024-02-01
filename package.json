@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "homepage": "https://myquicknote.netlify.app",
   "dependencies": {
     "@auth/core": "^0.18.1",
     "@auth/prisma-adapter": "^1.2.0",
