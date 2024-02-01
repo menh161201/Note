@@ -2,17 +2,11 @@
   "name": "note-final",
   "version": "0.1.0",
   "private": true,
-  "export": "next export",
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
-    "export": "next export",
+    "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
-    "lint": "next lint",
-    "prettier": "prettier --write .",
-    "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "lint": "next lint"
   },
   "dependencies": {
     "@auth/core": "^0.18.1",
